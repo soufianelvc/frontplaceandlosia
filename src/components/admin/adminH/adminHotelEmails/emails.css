@@ -1,0 +1,189 @@
+/* 
+.email-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 100px;
+}
+
+.email-table th, .email-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.email-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.email-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.email-table tr:hover {
+  background-color: #ddd;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.email-table {
+  width: 100% !important;
+  border-collapse: collapse;
+  margin-top: 100px;
+
+
+}
+.tablesemailss{
+
+
+}
+.email-table th, .email-table td {
+  border: 1px solid rgb(155, 16, 155);
+  padding: 12px;
+}
+
+.email-table th {
+  background-color: rgb(177, 17, 177);
+  color: white;
+  text-align: left;
+  min-width: 105px;
+}
+
+.email-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.email-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.email-table td {
+  align-items: center;
+
+}
+.email-table td:last-child{
+  min-width: 500px;
+}
+
+ .iconn {
+  margin-right: 2px;
+  margin-bottom: 4px;
+
+  color: #f1f1f1;
+  font-weight: 100;
+}
+
+td:hover .icon_Answer {
+  display: block;
+}
+.icon_Answer {
+  color: rgb(255, 255, 255);
+  margin: 1rem;
+  display: none;
+}
+.icon_Answer button{
+  background-color: rgba(137, 43, 226, 0.658);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+
+}
+
+
+.send-email-container {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(143, 11, 204, 0.836);
+}
+
+.send-email-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.send-email-form .form-group {
+  margin-bottom: 15px;
+}
+
+.send-email-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 500px;
+  color: white;
+}
+
+.send-email-form input[type="email"],
+.send-email-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color:  #ccc;
+}
+
+.send-email-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(137, 43, 226, 0.658);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+
+  width: 40%;
+  border: solid 1px rgba(209, 205, 205, 0.74);
+margin-left: 60%;
+}
+
+.submit-button:hover {
+  background-color: rgba(100, 30, 165, 0.808);
+  border: solid white 1px;
+  transition: 0.3s;
+  width: 41%;
+  text-align: center;
+  margin-right: auto;
+}
+
+@media (max-width: 1081px) {
+  .email-table th {
+    background-color: orange;
+    display: none;
+  }
+  .tay{
+    display: block;
+    margin-bottom: 0rem;
+    transform: translateY(5.9rem);
+    background-color: rebeccapurple;
+
+  }
+  .email-table td {
+    display: block;
+
+  }
+
+  .email-table tr {
+    border: solid black;
+  }
+}

@@ -1,0 +1,162 @@
+/* ClientReservations.css */
+
+/* .dashboard-container {
+  margin-top: 2rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.sidebarDC {
+  height: auto;
+  flex: 1;
+  max-width: 20%;
+}
+
+.reservation-list {
+  flex: 3;
+  max-width: 80%;
+}
+
+@media (max-width: 1200px) {
+  .sidebarDC {
+    max-width: 18%;
+  }
+  .reservation-list {
+    max-width: 82%;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-content {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebarDC {
+    max-width: 30%;
+  }
+  .reservation-list {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  .sidebarDC {
+    max-width: 100%;
+    order: 1;
+  }
+  .reservation-list {
+    max-width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 478px) {
+  .sidebarDC {
+    margin-top: 3rem;
+  }
+} */
+.dashboard-container {
+  margin-top: 2rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.sidebarDC {
+  height: auto;
+  flex: 1;
+  max-width: 20%;
+}
+
+.reservation-list {
+  flex: 3;
+  /* max-width: 80%; */
+  max-width: 79% !important;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.reservation-item {
+  flex: 1 1 calc(30.333% - 1rem); /* 3 items per row with margins */
+  margin: 0;
+  width: 70% !important;
+
+}
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .sidebarDC {
+    max-width: 18%;
+  }
+  .reservation-list {
+    max-width: 80%;
+  }
+  .reservation-item {
+    flex: 1 1 calc(30.333% - 1rem); /* 3 items per row with margins */
+    margin: 0;
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebarDC {
+    max-width: 16%;
+  }
+  .reservation-list {
+    max-width: 84%;
+  }
+  .reservation-item {
+    flex: 1 1 calc(50% - 1rem); /* 2 items per row with margins */
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebarDC {
+    max-width: 30%;
+  }
+  .reservation-list {
+    max-width: 70%;
+  }
+  .reservation-item {
+    flex: 1 1 100%; /* 1 item per row */
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  .sidebarDC {
+    max-width: 100%;
+    order: 1;
+  }
+  .reservation-list {
+    max-width: 100%;
+    order: 2;
+  }
+  .reservation-item {
+    margin:  0; /* Less margin for very small screens */
+  }
+}
+
+@media (max-width: 478px) {
+  .sidebarDC {
+    margin-top: 3rem;
+  }
+}

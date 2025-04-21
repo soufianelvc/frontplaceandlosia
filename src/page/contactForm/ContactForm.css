@@ -1,0 +1,165 @@
+
+/* General Styles */
+/* body {
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  background-color: #f4f4f9;
+  padding: 20px;
+  margin-top: 91px;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  color: rgb(164, 0, 214);
+  font-size: 2rem;
+  text-align: left;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-control {
+  border: 1px solid #d1c4e9;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn-primaryy {
+  background-color: rgb(164, 0, 214);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+
+}
+
+
+.btn-primaryy:hover{
+  background-color: white;
+  border: solid  rgb(164, 0, 214) 0.1px;
+  color:  rgb(164, 0, 214);
+
+}
+.btn-primaryy:active {
+  transition: 1.3s;
+  background-color: rgb(255, 255, 255); 
+  color: rgb(145, 0, 194);
+}
+.dev-animation{
+  width: 70%;
+} */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  background-color: #f4f4f9;
+  padding: 20px;
+  margin-top: 91px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  color: rgb(164, 0, 214);
+  font-size: 2rem;
+  text-align: left;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-control {
+  border: 1px solid #d1c4e9;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn-primaryy {
+  background-color: rgb(164, 0, 214);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-primaryy:hover {
+  background-color: white;
+  border: solid rgb(164, 0, 214) 0.1px;
+  color: rgb(164, 0, 214);
+}
+
+.btn-primaryy:active {
+  transition: 1.3s;
+  background-color: rgb(255, 255, 255);
+  color: rgb(145, 0, 194);
+}
+
+.dev-animation {
+  width: 70%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .dev-animation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-control {
+    font-size: 0.875rem;
+  }
+
+  .btn-primaryy {
+    padding: 8px 16px;
+    margin-left: 25%;
+  }
+  
+  .dev-animation {
+    width: 100%;
+  }
+  .lets{
+    margin-top: 2rem;
+  }
+}

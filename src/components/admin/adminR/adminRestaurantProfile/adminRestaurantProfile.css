@@ -1,0 +1,82 @@
+/* body {
+  background: rgb(99, 39, 120)
+} */
+.profileRestaurantCom{
+  /* margin-top: 200px; */
+  border: solid red 1px ;
+  transform: translateY(21%);
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #68c87d
+}
+
+.profileH-button {
+  background: rgb(98, 120, 39);
+  box-shadow: none;
+  border: none
+}
+
+.profileH-button:hover {
+  background: #2a7327
+}
+
+.profileH-button:focus {
+  background: #397327;
+  box-shadow: none
+}
+
+.profileH-button:active {
+  background: #3d7327;
+  box-shadow: none
+}
+
+.back:hover {
+  color: #27732b;
+  cursor: pointer
+}
+
+.labels {
+  font-size: 11px
+}
+
+.add-experience:hover {
+  background: #73c868;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #68c86d
+}
+
+@media(max-width:760px){
+  .profileRestaurantCom{
+    /* margin-top: 200px; */
+    border: solid red 1px ;
+    transform: translateY(15%);
+    margin-top: 0px;
+  }
+  .img-res{
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+  }
+  .updatpro{
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+}
+@media(max-width:572px){
+  .profileRestaurantCom{
+    /* margin-top: 200px; */
+    transform: translateY(-50%) !important;
+    margin-top: 0px !important;
+    padding-top: 0 !important;
+
+  }
+  /* .img-res{
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+  }
+  .updatpro{
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  } */
+}

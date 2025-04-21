@@ -1,0 +1,175 @@
+.ttableContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border:  solid rgba(9, 255, 0, 0.t267) 0.t5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  margin-top: 105px;
+  background-color: rgba(3, 121, 52, 0.t02);
+  /* background-color: rgba(17, 199, 41, 0.838); */
+  border:  solid 1.5px rgb(18, 172, 26);
+  padding: 1px;
+  
+}
+
+.ttableWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.tbookNow {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  border: none;
+  padding: 10px 20px;
+  background-color: #33dd6c;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ttableTitle {
+  font-size: 24px;
+}
+
+.ttableAddress {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ttableDistance {
+  color: #0071c2;
+  font-weight: 500;
+}
+
+.ttablePriceHighlight {
+  color: #008009;
+  font-weight: 500;
+}
+
+.ttableImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ttableImgWrapper {
+  width: 30%;
+}
+
+.ttableImg {
+  width: 100%;
+  margin-top: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.ttableDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.ttableDetailsTexts {
+  flex: 3;
+}
+
+.ttableDesc {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.ttableDetailsPrice {
+  flex: 1;
+  background-color: #19db332a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ttableDetailsPrice > h1 {
+  font-size: 18px;
+  color: #555;
+}
+.ttableDetailsPrice > span {
+  font-size: 14px;
+}
+.ttableDetailsPrice > h2 {
+  font-weight: 300;
+}
+.ttableDetailsPrice > button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #33dd58;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tslider{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.t613);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.tsliderWrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tsliderImg{
+  width: 80%;
+  height: 80vh;
+}
+
+.tclose{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.tarrow{
+  margin: 20px;
+  font-size: 50px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+@media (max-width: 526px) {
+  .ttableContainer{
+    margin-top: 10rem;
+  }
+  .tbookNow{
+    position: inherit;
+    margin-top: 0rem;
+  }
+  .ttableDetails{
+    display: block;
+  }
+}

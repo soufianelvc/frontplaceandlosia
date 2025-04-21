@@ -1,0 +1,167 @@
+/* 
+.profileHotleCom{
+  margin-top: 80px;
+  background-color: rgba(227, 210, 243, 0.089);
+  transform: translateY(25%);
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #BA68C8
+}
+
+.profileH-button {
+  background: rgb(98, 120, 39);
+  box-shadow: none;
+  border: none
+}
+
+.profileH-button:hover {
+  background: #682773
+}
+
+.profileH-button:focus {
+  background: #682773;
+  box-shadow: none
+}
+
+.profileH-button:active {
+  background: #682773;
+  box-shadow: none
+}
+
+.back:hover {
+  color: #682773;
+  cursor: pointer
+}
+
+.labels {
+  font-size: 11px
+}
+
+.add-experience:hover {
+  background: #BA68C8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #BA68C8
+} */
+
+.profileHotelContainer {
+  margin-top: 40px;
+  background-color: rgba(227, 210, 243, 0.199);
+  width: 96%;
+  padding-top: 1rem;
+
+}
+
+.profileImageSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.profileImageLabel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.editIcon {
+  width: 28px;
+  position: absolute;
+  margin-top: -80px;
+  margin-left: 70%;
+  background-color: rgb(227, 150, 250);
+  border-radius: 50%;
+  padding: 0.4rem;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 1%;
+
+}
+
+.profileName {
+  font-weight: bold;
+}
+
+.profileEmail {
+  color: #000;
+}
+
+.fileInput {
+  display: none;
+}
+
+.profileUpdateSection {
+  margin-top: 20px;
+}
+
+.updateTitle {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  margin-left: 1rem;
+}
+
+.formLabel {
+  font-size: 14px;
+}
+
+.formControl {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #BA68C8;
+  border-radius: 4px;
+}
+
+.formControl:focus {
+  box-shadow: none;
+  border-color: #BA68C8;
+}
+
+.saveButton {
+  background-color: #a026b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 20%;
+  margin-right: auto;
+  width: 60%;
+}
+
+.saveButton:hover {
+  background-color: #8c1a9a;
+}
+
+@media (max-width: 768px) {
+  .profileHotelContainer {
+    /* margin-top: 0rem; */
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .profileImage {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 562px) {
+  .profileHotelContainer {
+    margin-top: 0rem;
+    padding-top: 1rem;
+  }
+}

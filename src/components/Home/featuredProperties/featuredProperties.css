@@ -1,0 +1,134 @@
+.fp {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+  }
+  
+  .fpItem{
+    flex: 1;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(238, 235, 241, 0.911);
+  }
+  
+  .fpImg{
+    width:230px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .fpName{
+    color: rgb(164, 0, 214);
+    text-align: center;
+    font-weight: bold;
+    border: rgb(164, 0, 214) 1px solid;
+    /* border-top: none; */
+    border-bottom: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+    
+  }
+  
+  .fpCity{
+
+    font-weight: 300;
+    color: rgb(5, 5, 46);
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1rem;
+        width: 100%;
+        text-align: center;
+      transform: translateY(-1rem);
+  }
+  
+  .fpPrice{
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .fpRating{
+    margin-left: auto;
+    margin-right: auto;
+    border: rgb(164, 0, 214) 1px solid;
+    width: 100%;
+    border-top: none;
+
+  }
+  .fpRating>button{
+    background-color: rgb(164, 0, 214);
+    color: white;
+    border: none;
+    padding: 3px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .fpRating>span{
+    font-size: 14px;
+    margin-left: 25%;
+  }
+  @media (max-width: 790px) {
+    .fpItem{
+      flex: 1;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      margin-right: 2rem;
+
+    }
+  }
+  @media (max-width: 400px) {
+    .fp {
+      margin-left: 5px;
+      margin-right: 5px;
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 10px;
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+    .fpName{
+      border: none;
+      display: block;
+    }
+    .fpItem {
+      flex: 1 1 31.75%;
+      text-align: center;
+      width: 145px;
+      height: 190px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 2rem;
+      display: block;
+      padding-bottom: 14rem;
+    }
+    .fpRating{
+      display: block;
+      border: none;
+
+    }
+    .fpRating span {
+      display: block;
+      text-align: center; 
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+    .fpImg{
+        width: 125px;
+        height: 70px;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }

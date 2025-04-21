@@ -1,0 +1,224 @@
+/* .listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.listSearch {
+  flex: 1;
+  background-color: rgba(141, 17, 199, 0.938);
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 90px;
+  height: max-content;
+  margin-top: 90px;
+  color: white;
+  font-weight: 600;
+
+}
+
+.lsTitle{
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.lsItem{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+
+.lsItem>label{
+  font-size: 12px;
+}
+
+.lsItem>input{
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+.lsItem>span{
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lsOptions{
+  padding: 10px;
+}
+
+.lsOptionItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.lsOptionInput{
+  width: 50px;
+}
+
+.listSearch>button{
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.listResult {
+  flex: 3;
+} */
+
+
+/* hotelList.css */
+.list-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.list-wrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.list-search {
+  /* display: block;
+  background-color: rgba(141, 17, 199, 0.938);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 30rem; */
+
+  flex: 1;
+  background-color: rgba(141, 17, 199, 0.938);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 90px;
+  height: max-content;
+  margin-top: 90px;
+  color: white;
+  font-weight: 600;
+}
+
+.ls-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.ls-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.ls-item > label {
+  font-size: 14px;
+}
+
+.ls-item > input,
+.ls-item > span {
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.ls-item > span {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ls-options {
+  padding: 15px;
+}
+
+.ls-option-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.ls-option-input {
+  width: 60px;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .list-wrapper {
+    flex-direction: column;
+    width: 80%;
+
+    display: flex;
+    gap: 20px;
+  }
+
+  .list-search {
+    display: block;
+    max-width: 370px;
+    margin-bottom: 20px;
+    margin-top: 10rem;
+    position: relative;
+    margin-top: 70px;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .ls-title {
+    font-size: 20px;
+  }
+
+  .ls-option-input {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-search {
+    padding: 15px;
+  }
+
+  .ls-title {
+    font-size: 18px;
+  }
+
+  .ls-option-input {
+    width: 40px;
+  }
+}

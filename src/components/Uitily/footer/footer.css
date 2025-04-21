@@ -1,0 +1,86 @@
+.footer{
+    width: 80%;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+  
+  .fLists{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* السماح بالالتفاف */
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  
+  .fList{
+    list-style: none;
+    padding: 0;
+  }
+  
+  .fListItem{
+    margin-bottom: 10px;
+    color: rgb(164, 0, 214);
+    cursor: pointer;
+  }
+  .social-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  .social-link:hover {
+    color: #b61fe4;
+    cursor: pointer;
+  }
+  .fText {
+    margin-top: 0.3rem ;
+    font-size: 14px;
+    text-align: center;
+  }
+  @media (max-width: 500px) {
+    .fList{
+      flex-direction: row;
+    }
+    .fListItem{
+      display: block;
+      flex: 1 1 100px; 
+    }
+    .social-link{
+      text-decoration: none;
+      font-size: 100%;
+      text-align: center;
+    }
+    .footer-content{
+      display: block;
+    }
+    .fLists{
+      /* background-color: rgb(17, 221, 85); */
+    }
+    .footer{
+      width: 80%;
+      margin-top: 17px;
+      font-size: 11px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-social{
+        display: block;
+    }
+    .footer-social > div:first-child {
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+
+  }

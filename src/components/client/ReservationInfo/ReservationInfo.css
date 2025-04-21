@@ -1,0 +1,274 @@
+/* 
+.reservation-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.reservation-info .text-primary {
+  color: #007bff;
+}
+
+.reservation-info .text-light {
+  color: #f8f9fa;
+}
+
+.reservation-info .bg-primary {
+  background-color: #007bff;
+}
+
+.reservation-info img {
+  width: 50px;
+  height: 150px;
+}
+
+@media (max-width: 1200px) {
+  .reservation-info {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .reservation-info img {
+    width: 40px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .reservation-info {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .reservation-info img {
+    width: 30px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-info {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .reservation-info img {
+    width: 25px;
+    height: 80px;
+  }
+
+  .reservation-info h5 {
+    font-size: 16px;
+  }
+
+  .reservation-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservation-info {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .reservation-info img {
+    width: 20px;
+    height: 60px;
+  }
+
+  .reservation-info h5 {
+    font-size: 14px;
+  }
+
+  .reservation-info p {
+    font-size: 12px;
+  }
+} */
+
+
+/* Default Styling */
+.dashboard-container {
+  margin-top: 2rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.sidebarDC {
+  height: auto;
+  flex: 1;
+  max-width: 20%;
+}
+
+.reservation-list {
+  flex: 3;
+  max-width: 79%;
+}
+
+.reservation-item {
+  flex: 1 1 calc(30.333% - 1rem); /* 3 items per row with margins */
+  margin: 0;
+  width: 70% !important;
+}
+
+/* ReservationInfo Default Styling */
+.reservation-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.reservation-info img {
+  width: 50px;
+  height: 150px;
+}
+
+/* Media queries for responsiveness */
+
+/* Large Screens (1200px and below) */
+@media (max-width: 1200px) {
+  .sidebarDC {
+    max-width: 18%;
+  }
+
+  .reservation-list {
+    max-width: 80%;
+  }
+
+  .reservation-item {
+    flex: 1 1 calc(30.333% - 1rem); /* 3 items per row */
+    margin: 0;
+    width: 79% !important;
+  }
+
+  .reservation-info {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .reservation-info img {
+    width: 40px;
+    height: 120px;
+  }
+}
+
+/* Medium Screens (992px and below) */
+@media (max-width: 992px) {
+  .sidebarDC {
+    max-width: 16%;
+  }
+
+  .reservation-list {
+    max-width: 84%;
+  }
+
+  .reservation-item {
+    flex: 1 1 calc(50% - 1rem); /* 2 items per row */
+    width: 79% !important;
+  }
+
+  .reservation-info {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .reservation-info img {
+    width: 30px;
+    height: 100px;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .sidebarDC {
+    max-width: 30%;
+  }
+
+  .reservation-list {
+    max-width: 70%;
+  }
+
+  .reservation-item {
+    flex: 1 1 100%; /* 1 item per row */
+    width: 69% !important;
+  }
+
+  .reservation-info {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .reservation-info img {
+    width: 25px;
+    height: 80px;
+  }
+
+  .reservation-info h5 {
+    font-size: 16px;
+  }
+
+  .reservation-info p {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Screens (576px and below) */
+@media (max-width: 576px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .sidebarDC {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .reservation-list {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .reservation-item {
+    margin: 0; /* Less margin for very small screens */
+    width: 79% !important;
+  }
+
+  .reservation-info {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .reservation-info img {
+    width: 20px;
+    height: 60px;
+  }
+
+  .reservation-info h5 {
+    font-size: 14px;
+  }
+
+  .reservation-info p {
+    font-size: 12px;
+  }
+}
+
+/* Extra Extra Small Screens (478px and below) */
+@media (max-width: 478px) {
+  .sidebarDC {
+    margin-top: 3rem;
+  }
+}

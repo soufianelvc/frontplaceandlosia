@@ -1,0 +1,152 @@
+.repas-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.repas-title {
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.repas-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.repas-detail-bold {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.repas-rating {
+  background-color: #6c757d;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.repas-category {
+  margin-bottom: 10px;
+}
+
+.repas-category-label {
+  color: #6c757d;
+}
+
+.repas-category-value {
+  font-weight: bold;
+}
+
+.repas-details-header {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.repas-details-body {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.repas-price-container {
+  display: flex;
+  align-items: center;
+}
+
+.repas-price {
+  background-color: green;
+  color: wheat;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.repas-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.repas-link {
+  color: white;
+  text-decoration: none;
+}
+
+.repas-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .repas-container {
+    margin: 15px;
+  }
+
+  .repas-title {
+    font-size: 16px;
+  }
+
+  .repas-details {
+    flex-direction: column;
+  }
+
+  .repas-detail-bold {
+    margin-bottom: 5px;
+  }
+
+  .repas-rating {
+    margin-top: 5px;
+  }
+
+  .repas-category {
+    margin-bottom: 8px;
+  }
+
+  .repas-details-header {
+    font-size: 14px;
+  }
+
+  .repas-price {
+    font-size: 14px;
+  }
+
+  .repas-button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .repas-title {
+    font-size: 14px;
+  }
+
+  .repas-rating {
+    font-size: 12px;
+  }
+
+  .repas-category-value {
+    font-size: 14px;
+  }
+
+  .repas-details-body {
+    font-size: 14px;
+  }
+
+  .repas-price {
+    font-size: 12px;
+  }
+
+  .repas-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}

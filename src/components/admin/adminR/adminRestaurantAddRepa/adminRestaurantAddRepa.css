@@ -1,0 +1,89 @@
+.admin-add-repa {
+  margin-top: 80px;
+  background-color: rgba(227, 210, 243, 0.089);
+  padding: 20px;
+}
+
+.admin-add-repa h2 {
+  color: #0f9e1b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.input-formR, textarea {
+  height: 37px;
+  width: 75%;
+  border: 1px solid #0edf0e;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: auto;
+  padding: 10px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.bbb {
+  border: none;
+  color: white;
+  height: 46px;
+  width: 150px;
+  border-radius: 9px;
+  background-color: #0edf0e;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.bbb:hover {
+  color: rgb(243, 255, 69);
+}
+
+.bbb:disabled {
+  background-color: #979797;
+}
+
+.image-item {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+.image-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.upload__image-wrapper {
+  text-align: center;
+}
+
+.upload__image-wrapper .bbb {
+  margin: 5px;
+}
+
+.upload__image-wrapper .bbb.btn-primary {
+  background-color: #0edf0e;
+}
+
+.upload__image-wrapper .bbb.btn-danger {
+  background-color: #dc3545;
+}
+
+.upload__image-wrapper .bbb.btn-danger:hover {
+  color: #fff;
+}

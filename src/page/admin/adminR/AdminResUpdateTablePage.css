@@ -1,0 +1,90 @@
+
+.profile-content-res-utab{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* background-color: orange; */
+}
+
+/* Sidebar styles */
+.sidebar-res-utab {
+  margin-top: 3rem;
+  flex: 1;
+  max-width: 250px; 
+  max-height: 360px ;
+}
+
+.profile-res-utab {
+  margin-top: 5rem;
+  height: 3260px;
+  flex: 4;
+  padding: 16px; 
+  padding-top: 0;
+  text-align: center;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (max-width: 576px) {
+  .profile-content-res-utab {
+      flex-direction: column;
+  }
+  
+  .sidebar-res-utab {
+      max-width: 100%;
+      margin-bottom: 16px; 
+
+  }
+  
+  .profile-res-utab {
+      /* padding: 8px;  */
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 576px) and (max-width: 768px) {
+  .profile-content-res-utab {
+      flex-direction: row;
+  }
+  
+  .sidebar-res-utab {
+      max-width: 200px; /* Adjust width as needed */
+  }
+  
+  .profile-res-utab {
+      padding: 12px;
+       /* Adjust as needed */
+    
+  }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .profile-content-res-utab {
+      flex-direction: row;
+  }
+  
+  .sidebar-res-utab {
+      max-width: 250px; /* Adjust width as needed */
+  }
+  
+  .profile-res-utab {
+      padding: 16px; /* Adjust as needed */
+
+  }
+}
+
+@media (max-width: 548px) {
+  .profile-res-utab {
+    /* padding-bottom: 0;
+    transform: translateY(40%);
+    height: 3260px;
+    margin-top: 0;
+    padding-top: 0; */
+    margin-left: auto;
+    margin-right: auto;
+}
+}

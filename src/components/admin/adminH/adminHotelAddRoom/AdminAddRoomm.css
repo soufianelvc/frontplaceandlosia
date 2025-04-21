@@ -1,0 +1,84 @@
+.adminhaddRR{
+  margin-top: 80px;
+  background-color: rgba(227, 210, 243, 0.089);
+  }
+.admin-content-text {
+  color: #161616;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 28px;
+  text-align: left;
+}
+.item-delete-edit {
+  color: #979797;
+  /* font-family: "sans-serif"; */
+  font-family:  sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 30px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.text-form {
+  color: #730981;
+  font-family: "sans-serif";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: left;
+}
+.input-form {
+  height: 37px;
+  width: 100%;
+  border: 1px solid #8409a3;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #8409a3;
+}
+.input-form-area {
+  width: 100%;
+  border: 1px solid #8409a3;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.select {
+  box-sizing: border-box;
+  height: 40px;
+  color: #45015a;
+  width: 100%;
+  border: 1px solid #979797;
+  border-radius: 8px;
+}
+.btn-save {
+  border: none;
+  color: white;
+  height: 46px;
+  width: 150px;
+  border-radius: 9px;
+  background-color: #bc0edf;
+  font-weight: 500;
+}
+.btn-save:hover {
+  color: rgb(243, 255, 69);
+}
+.btn-a {
+  border: none;
+  color: white;
+  height: 45px;
+  border-radius: 9px;
+  background-color: #ac1ca0;
+}
+.btn-a:hover {
+  color: rgb(119, 12, 168);
+}
+/* end admin  */
+
+@media(max-width:1200px){
+  .adminhaddRR{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

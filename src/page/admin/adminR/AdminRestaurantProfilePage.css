@@ -1,0 +1,96 @@
+/* Container for the entire page */
+/* .profile-container-res {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px; 
+} */
+
+/* Flex container for sidebar and main content */
+.profile-content-res-p{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* background-color: orange; */
+}
+
+/* Sidebar styles */
+.sidebar-res-p {
+  margin-top: 3rem;
+  flex: 1;
+  max-width: 250px; 
+  max-height: 360px ;
+}
+
+/* Profile content styles */
+.profile-res-p {
+    height: 660px;
+  flex: 4;
+  padding: 16px; /* Adjust as needed */
+  padding-top: 0;
+  text-align: center;
+  /* background-color: orange; */
+  /* max-height: 300px; */
+}
+
+/* Media Queries */
+
+/* Mobile devices (portrait) */
+@media (max-width: 576px) {
+  .profile-content-res-p {
+      flex-direction: column;
+  }
+  
+  .sidebar-res-p {
+      max-width: 100%;
+      margin-bottom: 16px; 
+
+  }
+  
+  .profile-res-p {
+      padding: 8px; /* Adjust as needed */
+  }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 576px) and (max-width: 768px) {
+  .profile-content-res-p {
+      flex-direction: row;
+  }
+  
+  .sidebar-res-p {
+      max-width: 200px; /* Adjust width as needed */
+  }
+  
+  .profile-res-p {
+      padding: 12px;
+       /* Adjust as needed */
+    
+  }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .profile-content-res-p {
+      flex-direction: row;
+  }
+  
+  .sidebar-res-p {
+      max-width: 250px; /* Adjust width as needed */
+  }
+  
+  .profile-res-p {
+      padding: 16px; /* Adjust as needed */
+
+  }
+}
+
+@media (max-width: 548px) {
+  .profile-res-p {
+    padding-bottom: 0;
+    transform: translateY(40%);
+    /* max-height: 500px; */
+    margin-top: 0;
+    padding-top: 0;
+}
+}

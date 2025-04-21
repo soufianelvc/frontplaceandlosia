@@ -1,0 +1,68 @@
+/* ClientDashboard.css */
+
+.dashboard-container {
+  margin-top: 2rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.sidebarDC {
+  height: auto;
+  flex: 1;
+  max-width: 20%;
+}
+
+.profile {
+  flex: 3;
+  max-width: 80%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .sidebarDC{
+    max-width: 18%;
+  }
+  .profile {
+    max-width: 82%;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-content {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 788px) {
+  .sidebarDC {
+    max-width: 30%;
+  }
+  .profile {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  .sidebarDC {
+    max-width: 100%;
+    order: 1;
+  }
+  .profile {
+    max-width: 100%;
+    order: 2;
+  }
+}
+@media (max-width: 478px) {
+
+  .sidebarDC {
+    margin-top: 3rem;
+  }
+}
+

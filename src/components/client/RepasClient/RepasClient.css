@@ -1,0 +1,165 @@
+/* .reservation-success {
+  background-color: #fffb1e2c;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reservation-success h5 {
+  color: orange;
+  display: flex;
+  align-items: center;
+}
+
+.reservation-success .delete-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.reservation-success img {
+  max-height: 150px;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.dialog-content, .dialog-actions {
+  background-color: rgba(141, 17, 199, 0.938);
+}
+
+.dialog-actions .MuiButton-root {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .reservation-success {
+    padding: 0.75rem;
+  }
+  .reservation-success h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .reservation-success {
+    padding: 0.5rem;
+  }
+  .reservation-success h5 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-success {
+    padding: 0.5rem;
+  }
+  .reservation-success h5 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservation-success {
+    padding: 0.5rem;
+  }
+  .reservation-success h5 {
+    font-size: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reservation-success .delete-icon {
+    margin: 0.5rem 0 0 0;
+  }
+} */
+.reservation-success {
+  background-color: #f8f591;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 96%;
+  margin-top: 1.5em;
+}
+
+.reservation-details {
+  margin: 0 1rem;
+}
+.detail{
+  background-color: rgb(238, 146, 7);
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 0.2rem;
+  margin-right: 0.2rem;
+}
+.reservation-details h5 {
+  color: rgb(255, 136, 0);
+  display: flex;
+  align-items: center;
+}
+
+.delete-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.image-container {
+  margin-top: 0.5rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.image {
+  max-height: 150px;
+  width: 100%;
+  margin-left: 12%;
+}
+
+.dialog-content, .dialog-actions {
+  background-color: rgba(141, 17, 199, 0.938);
+}
+
+.dialog-actions .MuiButton-root {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .reservation-success {
+    padding: 0.75rem;
+  }
+  .reservation-details h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .reservation-success {
+    padding: 0.5rem;
+  }
+  .reservation-details h5 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-success {
+    padding: 0.5rem;
+  }
+  .reservation-details h5 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservation-success {
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reservation-details h5 {
+    font-size: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .delete-icon {
+    margin: 0.5rem 0 0 0;
+  }
+}

@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;800&display=swap");
+
+
+
+.yy h2 {
+  margin-top: 0px;
+  font-weight: 400;
+  /* margin: 1rem 0 0; */
+  color: rgb(167, 13, 167);
+}
+
+.yy ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  list-style: none;
+
+}
+
+.yy ul li {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: 0.25rem;
+  flex-flow: column;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.034);
+  backdrop-filter: blur(4px);
+
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(160, 157, 157, 0.288);
+}
+
+.yy ul li time {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.yy ul li.booked {
+  background: #4caf50; 
+}
+
+.yy ul .today {
+  background: #ffffff70;
+}
+
+.yy ul .today time {
+  font-weight: 800;
+}
+.btnR{
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color:  rgb(212, 19, 212);
+
+}
+.btnR:hover{
+
+  transition: 0.3s;
+  border-radius: 12%;
+  color: rgb(255, 255, 255);
+  background-color:  rgb(109, 11, 109);
+  border: solid 0.5px rgb(155, 16, 155);
+
+}
+.heading{
+  margin-top: 2rem;
+}
+/* Base Styles */
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  margin-left: 90%;
+  transform: translateY(-2.5rem);
+  
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid #9c0cdf;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calendar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+.calendar li {
+  width: 14%;
+  text-align: center;
+  margin: 2px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.booked {
+  background-color: green;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .calendar li {
+    width: 16%;
+  }
+}
+
+@media (max-width: 992px) {
+  .calendar li {
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar li {
+    width: 25%;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .calendar li {
+    width: 33%;
+  }
+
+  .btn {
+    padding: 3px 6px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,53 @@
+/* body {
+  background: rgb(99, 39, 120)
+} */
+.clientotleCom{
+  margin-top: 5rem;
+  padding-top: 1rem;
+}
+.form-controlc{
+  border: 1px solid #0e62df62;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+.form-controlc:focus {
+  border-color: #6e64f1;
+}
+
+.client-button {
+  background: rgb(99, 39, 120);
+  box-shadow: none;
+  border: none
+}
+
+.client-button:hover {
+  background: #2f2773
+}
+
+.client-button:focus {
+  background: #0614da;
+  box-shadow: none
+}
+
+.client-button:active {
+  background: #0619c0;
+  box-shadow: none
+}
+
+.back:hover {
+  color: #2d16ffaf;
+  cursor: pointer
+}
+
+.labels {
+  font-size: 11px
+}
+
+.add-experience:hover {
+  background: #7268c8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #6a68c8
+}

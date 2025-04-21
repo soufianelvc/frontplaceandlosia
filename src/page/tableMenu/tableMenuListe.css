@@ -1,0 +1,181 @@
+/* .tlistContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  
+}
+
+.tlistWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+.tlistSearch {
+  flex: 1;
+  background-color: rgba(24, 161, 70, 0.t938);
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 90px;
+  height: max-content;
+  margin-top: 90px;
+  color: white;
+  font-weight: 600;
+  background-color: #00c23a;
+
+}
+
+.tlsTitle{
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.tlsItem{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+
+.tlsItem>label{
+  font-size: 12px;
+}
+
+.tlsItem>input{
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+.tlsItem>span{
+  height: 30px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tlsOptions{
+  padding: 10px;
+}
+
+.tlsOptionItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.tlsOptionInput{
+  width: 50px;
+}
+
+.tlistSearch>button{
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tlistResult {
+  flex: 3;
+} */
+/* Base styles */
+.tlistContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.tlistWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.tlistSearch {
+  flex: 1;
+  background-color: #00c23a;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 90px;
+  height: max-content;
+  margin-top: 90px;
+  color: white;
+  font-weight: 600;
+}
+
+.tlsTitle {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.tlsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tlsItem > label {
+  font-size: 12px;
+}
+
+.tlsItem > input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.tlsOptions {
+  padding: 10px;
+}
+
+.tlsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.tlsOptionInput {
+  width: 50px;
+}
+
+.tlistResult {
+  flex: 3;
+}
+
+/* Media Queries */
+@media (max-width: 905px) {
+  .tlistWrapper {
+    flex-direction: column;
+  }
+  
+  .tlistSearch, .tlistResult {
+    width: 100%;
+  }
+
+  .tlistSearch {
+    position: relative;
+    margin-top: 20px;
+    top: auto;
+  }
+}
+@media (max-width: 470px) {
+  .tlistSearch{
+    margin-top: 3.2rem;
+  }
+}

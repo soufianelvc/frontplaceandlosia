@@ -1,0 +1,19 @@
+/* listCard.css */
+.list-card {
+  padding: 20px;
+}
+
+.list-card-title {
+  color: #13b82e;
+  border-bottom: 2px solid #13b82e;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.list-card-empty {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+}

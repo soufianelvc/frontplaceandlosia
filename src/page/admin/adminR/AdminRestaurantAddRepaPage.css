@@ -1,0 +1,116 @@
+/* Container for the entire page */
+/* .profile-container-res {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px; 
+} */
+
+/* Flex container for sidebar and main content */
+.profile-content-res-ar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+/* Sidebar styles */
+.sidebar-res-ar {
+  margin-top: 3rem;
+  flex: 1;
+  max-width: 250px; 
+}
+
+/* Profile content styles */
+.profile-res-ar {
+  min-height: 860px;
+  flex: 4;
+  padding: 16px; /* Adjust as needed */
+  padding-top: 0;
+  /* padding-bottom: 2rem !important; */
+  text-align: center;
+  /* background-color: rebeccapurple; */
+}
+
+/* Media Queries */
+
+/* Mobile devices (portrait) */
+@media (max-width: 576px) {
+  .profile-content-res-ar {
+      flex-direction: column;
+  }
+  
+  .sidebar-res-ar {
+      max-width: 100%;
+      margin-bottom: 16px; 
+  }
+  
+  .profile-res-ar {
+    padding-top: 0;
+    transform: translateY(-70%) !important;
+    max-height: 500px ;
+
+  }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 576px) and (max-width: 768px) {
+  .profile-content-res-ar {
+      flex-direction: row;
+  }
+  
+  .sidebar-res-ar {
+      max-width: 200px; /* Adjust width as needed */
+  }
+  
+  .profile-res-ar {
+      padding: 12px;
+       /* Adjust as needed */
+    
+  }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .profile-content-res-ar {
+      flex-direction: row;
+  }
+  
+  .sidebar-res-ar {
+      max-width: 250px; /* Adjust width as needed */
+  }
+  
+  .profile-res-ar {
+      padding: 16px; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 578px) {
+  .profile-res-ar {
+    margin-top: 18rem;
+    height: 70rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transform: translateY(0%);
+}
+}
+
+@media (max-width: 468px) {
+  /* .profile-res-ar {
+    margin-top: 18rem;
+    height: 70rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transform: translateY(0%);
+} */
+ .sidebar-res-ar{
+  margin-top: 3rem;
+  max-height: 370px;
+ }
+ .profile-res-ar {
+  padding-top: 0;
+  transform: translateY(-30%) !important;
+  max-height: 500px ;
+  max-width: 100%;
+
+}
+}

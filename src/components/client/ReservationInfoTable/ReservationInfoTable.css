@@ -1,0 +1,51 @@
+.reservation-info {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+.reservation-info:hover {
+  background-color: #c5def7;
+  cursor: pointer;
+}
+
+.reservation-details {
+  margin-bottom: 1rem;
+}
+
+.delete-icon {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.image-container img {
+  /* max-height: 300px; */
+  width: 80%;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .reservation-info {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .reservation-info {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-info {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservation-info {
+    padding: 0.5rem;
+  }
+}

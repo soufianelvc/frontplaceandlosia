@@ -1,0 +1,193 @@
+
+ .icon-delete{
+  color: rgb(216, 8, 8);
+}.icon-edit{
+  color: rgb(2, 161, 2);
+}
+.icon-details{
+  color:#007bff;
+} 
+.containerr_infoC {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard_content_mic {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.sidebarAH{
+  flex: 1;
+  max-width: 20%;
+  margin-top: 1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  margin-left: 0;
+}
+
+.rooms {
+  flex: 3;
+  max-width: 75%;
+  margin-top: 2rem;
+}
+
+.rooms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.room-item {
+  flex: 1 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.page-item {
+  margin: 0 0.5rem;
+}
+
+.page-link {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.divider {
+  background-color: rgba(141, 17, 199, 0.938);
+  border: 0;
+  height: 2px;
+  margin: 1rem 0;
+}
+
+
+@media (max-width: 1200px) {
+  .rooms {
+    max-width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sidebarAH{
+    max-width: 18%;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .dashboard_content_mic {
+    /* flex-direction: column; */
+  }
+}
+
+@media (max-width: 788px) {
+  .sidebarAH{
+    max-width: 30%;
+  }
+  .rooms {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard_content_mic {
+    flex-direction: column;
+  }
+  .sidebarAH {
+    max-width: 100%;
+    order: 1; 
+    margin-top: 4rem;
+  }
+  .rooms {
+    max-width: 100%;
+    order: 2;
+  }
+  .rooms-list {
+    flex-direction: column;
+  }
+  .room-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* Base styles for the table */
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  padding-left: 20%;
+  padding-right: 20rem;
+
+  overflow-x: auto; /* Enable horizontal scroll if necessary */
+}
+
+.table-container th, .table-container td {
+  padding: 10px;
+  text-align: left;
+}
+
+
+.table-container th {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+  background-color: rgb(195, 0, 255);
+  color: #FFFFFF ;
+}
+
+.table-container td {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .table-container th, .table-container td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-container {
+    font-size: 14px;
+  }
+
+  .table-container th, .table-container td {
+    padding: 6px;
+  }
+}
+@media (max-width: 700px) {
+  .table-container img {
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50%;
+  }
+  .table-container {
+    font-size: 14px;
+  }
+
+  .table-container th, .table-container td {
+    padding: 6px;
+    font-size: 10px;
+  }
+}

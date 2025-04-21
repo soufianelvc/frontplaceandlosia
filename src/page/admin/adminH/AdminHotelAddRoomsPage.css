@@ -1,0 +1,73 @@
+.container_aroom {
+  padding-top: 2rem;
+  margin: 0 auto;
+  min-height: 600px;
+}
+
+.dashboard-content_aroom {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.sidebarAH_aroom {
+  flex: 1;
+  /* max-width: 20%; */
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+}
+
+.main-content_aroom {
+  flex: 3;
+  max-width: 90%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1200px) {
+  .sidebarAH_aroom {
+    max-width: 18%;
+  }
+  .main-content_aroom {
+    max-width: 82%;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-content_aroom {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 788px) {
+  .sidebarAH_aroom {
+    max-width: 30%;
+  }
+  .main-content_aroom {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content_aroom {
+    flex-direction: column;
+  }
+  .sidebarAH_aroom {
+    max-width: 100%;
+    order: 1;
+  }
+  .main-content_aroom {
+    max-width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 478px) {
+  .sidebarAH_aroom {
+    margin-top: 3rem;
+  }
+}
