@@ -5,7 +5,7 @@
 
 // export const getAllTable = createAsyncThunk('tablesSlice/getAllTable',async(arg)=>{
 //   try {
-//     const res = await axios.get("http://127.0.0.1:8000/api/tables");
+//     const res = await axios.get("http://placeandalosia.free.nf/api/tables");
 //     console.log(res.data);
 //     return res.data;
     
@@ -16,7 +16,7 @@
 // export const addTable = createAsyncThunk('tablesSlice/addTable', async (formData) => {
 //   try {
 //     await ClientApi.getCsrfToken();
-//     const res = await axiosClient.post("http://127.0.0.1:8000/api/tables", formData, {
+//     const res = await axiosClient.post("http://placeandalosia.free.nf/api/tables", formData, {
 //       headers: {
 //         'Content-Type': 'multipart/form-data',
 //       },
@@ -97,7 +97,7 @@ import { ClientApi } from "../../service/Api/Client/ClientApi";
 
 export const getAllTable = createAsyncThunk('tablesSlice/getAllTables', async () => {
   try {
-    const res = await axios.get("http://127.0.0.1:8000/api/tables");
+    const res = await axios.get("http://placeandalosia.free.nf/api/tables");
     console.log(res.data);
     return res.data;
   } catch (error) {
@@ -108,7 +108,7 @@ export const getAllTable = createAsyncThunk('tablesSlice/getAllTables', async ()
 export const addTable = createAsyncThunk('tablesSlice/addTable', async (formData) => {
   try {
     await ClientApi.getCsrfToken();
-    const res = await axiosClient.post("http://127.0.0.1:8000/api/tables", formData, {
+    const res = await axiosClient.post("http://placeandalosia.free.nf/api/tables", formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },

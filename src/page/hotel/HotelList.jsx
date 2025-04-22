@@ -26,7 +26,7 @@
 //   useEffect(() => {
 //     const fetchReservations = async () => {
 //       try {
-//         const response = await axios.get('http://127.0.0.1:8000/api/reservations');
+//         const response = await axios.get('http://placeandalosia.free.nf/api/reservations');
 //         setReservations(response.data);
 //       } catch (error) {
 //         console.error('Error fetching reservations:', error);
@@ -169,8 +169,6 @@
 
 // export default HotelList;
 
-
-
 import "./hotelList.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -199,7 +197,7 @@ const HotelList = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/reservations');
+        const response = await axios.get('http://placeandalosia.free.nf/api/reservations');
         setReservations(response.data);
       } catch (error) {
         console.error('Error fetching reservations:', error);

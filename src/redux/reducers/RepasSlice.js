@@ -6,7 +6,7 @@ import { ClientApi } from "../../service/Api/Client/ClientApi";
 // Thunk to fetch all repas
 export const getAllRepas = createAsyncThunk('repaSlice/getAllRepas', async () => {
   try {
-    const res = await axios.get("http://127.0.0.1:8000/api/repas");
+    const res = await axios.get("http://placeandalosia.free.nf/api/repas");
     console.log(res.data);
     return res.data;
   } catch (error) {
@@ -19,7 +19,7 @@ export const getAllRepas = createAsyncThunk('repaSlice/getAllRepas', async () =>
 export const addRepa = createAsyncThunk('repaSlice/addRepa', async (formData) => {
   try {
     await ClientApi.getCsrfToken();
-    const res = await axiosClient.post("http://127.0.0.1:8000/api/repas", formData, {
+    const res = await axiosClient.post("http://placeandalosia.free.nf/api/repas", formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },

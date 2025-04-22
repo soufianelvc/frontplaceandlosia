@@ -17,7 +17,7 @@ const handleUpload = async () => {
   formData.append('file', file);
 
   try {
-    const response = await axios.post("http://127.0.0.1:8000/api/upload", formData, {
+    const response = await axios.post("http://placeandalosia.free.nf/api/upload", formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         'X-CSRF-TOKEN': csrfToken // Include CSRF token in the request headers
@@ -28,7 +28,6 @@ const handleUpload = async () => {
     console.error('Error uploading file:', error);
   }
 };
-
 
   return (
     <div>

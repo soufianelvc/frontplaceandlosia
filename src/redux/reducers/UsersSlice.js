@@ -4,7 +4,7 @@ import { axiosClient } from "../axios";
 
 export const getAllUsers = createAsyncThunk('usersSlice/getAllUsers',async()=>{
   try {
-    const res = await axios.get("http://127.0.0.1:8000/api/users");
+    const res = await axios.get("http://placeandalosia.free.nf/api/users");
     console.log(res.data.users);
     return res.data.users;
     

@@ -5,14 +5,13 @@
 // import './adminDetails.css';
 // import { useState } from 'react';
 
-
 // const AdminDetailsRoomsPage = () => {
 //   const location = useLocation();
 //   const { rm } = location.state;
 //   const [bookings, setbookings] = useState([]);
 
 //     try {
-//       const res =  axiosClient.get(`http://127.0.0.1:8000/api/room-reservations/${rm.id}`).then(res=>setbookings(res.data));
+//       const res =  axiosClient.get(`http://placeandalosia.free.nf/api/room-reservations/${rm.id}`).then(res=>setbookings(res.data));
 
 //     } catch (error) {
 //       console.log(error);
@@ -94,7 +93,6 @@
 //                     <time dateTime={`${currentYear}-${currentMonth + 1}-${day}`}>{day}</time>
 //                   </li> 
 
-                 
 //               ))}
 //             </ul>
 //           </div>
@@ -125,7 +123,7 @@ const AdminDetailsRoomsPage = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   const fetchBookings = (month, year) => {
-    axiosClient.get(`http://127.0.0.1:8000/api/room-reservations/${rm.id}`, {
+    axiosClient.get(`http://placeandalosia.free.nf/api/room-reservations/${rm.id}`, {
       params: {
         month: month + 1, 
         year: year,

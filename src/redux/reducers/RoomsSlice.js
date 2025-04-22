@@ -5,7 +5,7 @@ import { ClientApi } from "../../service/Api/Client/ClientApi";
 
 export const getAllRoom = createAsyncThunk('roomSlice/getAllRoom',async()=>{
   try {
-    const res = await axios.get("http://127.0.0.1:8000/api/rooms");
+    const res = await axios.get("http://placeandalosia.free.nf/api/rooms");
     console.log(res.data);
     return res.data;
     
@@ -16,7 +16,7 @@ export const getAllRoom = createAsyncThunk('roomSlice/getAllRoom',async()=>{
 export const addRoom = createAsyncThunk('roomSlice/addRoom', async (formData) => {
   try {
     await ClientApi.getCsrfToken();
-    const res = await axiosClient.post("http://127.0.0.1:8000/api/rooms", formData,{
+    const res = await axiosClient.post("http://placeandalosia.free.nf/api/rooms", formData,{
       headers: {
         'Content-Type': 'multipart/form-data',
       },
