@@ -23,7 +23,7 @@ const FeaturedProperties = () => {
 <Fade direction="right">
         <div className="fpItem border">
           <img
-            src="http://localhost:8000/images/room1.jpg"
+            src="http://placeandalosia.free.nf/images/room1.jpg"
             alt=""
             className="fpImg"
           />
@@ -40,7 +40,7 @@ const FeaturedProperties = () => {
 <Fade direction="left">
         <div className="fpItem border">
           <img
-            src="http://localhost:8000/images/room2.jpg"
+            src="http://placeandalosia.free.nf/images/room2.jpg"
             alt=""
             className="fpImg"
           />
@@ -57,7 +57,7 @@ const FeaturedProperties = () => {
 <Fade direction="right">
         <div className="fpItem">
           <img
-            src="http://localhost:8000/images/room3.jpg"
+            src="http://placeandalosia.free.nf/images/room3.jpg"
             alt=""
             className="fpImg"
           />

@@ -49,7 +49,7 @@ const ReservationInfo = ({ reservation, i, onDelete }) => {
       </div>
       <div className="room-info mx-3">
         <img 
-          src={`http://localhost:8000/images/${room.image}`} 
+          src={`http://placeandalosia.free.nf/images/${room.image}`} 
           alt="" 
           className="w-100 mt-2" 
           style={{width:"50px",height:"150px"}}

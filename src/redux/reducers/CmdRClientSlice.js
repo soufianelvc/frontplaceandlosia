@@ -3,10 +3,9 @@ import axios from "axios";
 import { axiosClient } from "../axios";
 import { ClientApi } from "../../service/Api/Client/ClientApi";
 
-
 export const getAllCmdClient = createAsyncThunk('cmdClientSlice/getAllCmdClient', async (id) => {
   try {
-    const res = await axios.get(`http://localhost:8000/api/commandss/${id}`);
+    const res = await axios.get(`http://placeandalosia.free.nf/api/commandss/${id}`);
     // console.log('Server response:', res.data); 
     return res.data;
   } catch (error) {
@@ -18,7 +17,7 @@ export const getAllCmdClient = createAsyncThunk('cmdClientSlice/getAllCmdClient'
 export const deleteCmd = createAsyncThunk('cmdClientSlice/deleteCmd', async (id) => {
   try {
     await  ClientApi.getCsrfToken();
-    await axiosClient.delete(`http://localhost:8000/api/commandes/${id}`);
+    await axiosClient.delete(`http://placeandalosia.free.nf/api/commandes/${id}`);
     
     return id; // Return the deleted id to filter it out from the state
   } catch (error) {
@@ -29,7 +28,7 @@ export const deleteCmd = createAsyncThunk('cmdClientSlice/deleteCmd', async (id)
 export const addCmd = createAsyncThunk('cmdClientSlice/addCmd', async (commandData) => {
   try {
     await ClientApi.getCsrfToken();
-    const res = await axiosClient.post('http://localhost:8000/api/commandes', commandData);
+    const res = await axiosClient.post('http://placeandalosia.free.nf/api/commandes', commandData);
     await alert(" your commande is add success ")
     return res.data;
   } catch (error) {
@@ -37,8 +36,6 @@ export const addCmd = createAsyncThunk('cmdClientSlice/addCmd', async (commandDa
     throw error; // Rethrow the error to be handled by Redux Toolkit
   }
 });
-
-
 
 const iniState = {
   Cmds : [],
@@ -73,7 +70,6 @@ const CmdRClientSlice = createSlice({
       state.Cmds.push(action.payload);
     });
 
-    
   }
 })
 

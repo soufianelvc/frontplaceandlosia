@@ -14,7 +14,7 @@
 //   <Fade direction="up">
 //       <div className="hsearchItemhotle">
 //         <img
-//         src={`http://localhost:8000/images/${room.image}`}         
+//         src={`http://placeandalosia.free.nf/images/${room.image}`}         
 //           alt=""
 //           className="hsiImg"
 //         />
@@ -50,7 +50,6 @@
 
 // export default SearchItemhotle;
 
-
 import { Fade } from "react-awesome-reveal";
 import "./searchItemHotel.css";
 import { useNavigate } from "react-router-dom";
@@ -66,7 +65,7 @@ const SearchItemhotle = ({ room, date }) => {
     <Fade direction="up">
     <div className="search-item-hotel">
       <img
-        src={`http://localhost:8000/images/${room.image}`}
+        src={`http://placeandalosia.free.nf/images/${room.image}`}
         alt=""
         className="search-item-img"
       />

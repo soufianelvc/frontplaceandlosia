@@ -28,7 +28,7 @@ const MailList = ({ bgColor }) => {
   const handleSubscribe = async () => {
     try {
       await  ClientApi.getCsrfToken();
-      const response = await axiosClient.post("http://localhost:8000/api/subscribe", {
+      const response = await axiosClient.post("http://placeandalosia.free.nf/api/subscribe", {
         email: email,
       });
       await alert('add emails success')

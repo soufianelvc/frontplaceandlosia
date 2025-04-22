@@ -26,11 +26,9 @@ const ManagementInfoIlients = () => {
 
   const [name, setName] = useState();
 
- 
   useEffect(() => {
     dispatch(getAllUsers());
   }, [dispatch]);
-
 
   const allUsers = useSelector(state => state.allUsers.Users) || [];
   const offset = currentPage * usersPerPage;
@@ -68,7 +66,6 @@ const ManagementInfoIlients = () => {
   
   };
 
-
   const onDelete = async (id) => {
     try {
 
@@ -78,7 +75,6 @@ const ManagementInfoIlients = () => {
       console.error('Error deleting reservation:', error);
     }
   };
-
 
   const handleDelete = (item) => {
     setOpenAlert(true);
@@ -126,7 +122,7 @@ const ManagementInfoIlients = () => {
       <DialogContent style={{backgroundColor:"rgba(141, 17, 199, 0.938)"}}>
         <table className=''>
           <tr >
-          <th className=''><img src={`http://localhost:8000/images/${client.image}`} onError={(e) => e.target.src = file}style={{width: "100px", height: "100px", borderRadius: "50%"}} /></th>
+          <th className=''><img src={`http://placeandalosia.free.nf/images/${client.image}`} onError={(e) => e.target.src = file}style={{width: "100px", height: "100px", borderRadius: "50%"}} /></th>
           <th className="text-light ps-3 mt-3"> <p className=''>ClientId : {client.id}</p></th>
           </tr>
 
@@ -156,7 +152,6 @@ const ManagementInfoIlients = () => {
   const handleEdite = (item) => {
     navigate('/edite_info_clients', { state: { client: item} });
   };
-
 
   const containerStyles = {
     width: '90%'
@@ -193,7 +188,7 @@ const ManagementInfoIlients = () => {
           <td data-label="CID">{item.id}</td>
           <td data-label="Image">
             <img 
-              src={`http://localhost:8000/images/${item.image}`} 
+              src={`http://placeandalosia.free.nf/images/${item.image}`} 
               onError={(e) => e.target.src = file}
               alt="User"
               style={{ width: '50px', height: '50px', borderRadius: '50%' }}

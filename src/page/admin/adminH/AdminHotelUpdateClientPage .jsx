@@ -22,14 +22,14 @@ const AdminHotelUpdateClientPage = () => {
   useEffect(() => {
     const fetchClientData = async () => {
       try {
-        const res = await axiosClient.get(`http://localhost:8000/api/users/${clientId}`);
+        const res = await axiosClient.get(`http://placeandalosia.free.nf/api/users/${clientId}`);
         const client = res.data.user;
         setName(client.name);
         setName2(client.name2);
         setEmail(client.email);
         setPhoneNumber(client.phoneNumber);
         setAddress1(client.address1);
-        setImage(client.image ? `http://localhost:8000/images/${client.image}` : avatar);
+        setImage(client.image ? `http://placeandalosia.free.nf/images/${client.image}` : avatar);
 
       } catch (error) {
         console.error('Failed to fetch client data:', error);
@@ -65,7 +65,7 @@ const AdminHotelUpdateClientPage = () => {
         formData.append('image', image);
       }
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res = await axiosClient.post(`http://localhost:8000/api/users/${clientId}`, formData, {
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/users/${clientId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -147,7 +147,6 @@ const AdminHotelUpdateClientPage = () => {
                   </label>
                   <input type="file" name="image" onChange={handleImageChange} id='upload-photo' className='d-none' />
                 </div>
-
 
                     <button type="submit" className="btn-login mx-auto mt-4">Update Account</button>
 

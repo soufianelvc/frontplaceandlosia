@@ -34,7 +34,7 @@ export const addRepa = createAsyncThunk('repaSlice/addRepa', async (formData) =>
 // Thunk to delete a repa
 export const deleteRepa = createAsyncThunk('repaSlice/deleteRepa', async (id) => {
   try {
-    const rep = await axiosClient.delete(`http://localhost:8000/api/repas/${id}`);
+    const rep = await axiosClient.delete(`http://placeandalosia.free.nf/api/repas/${id}`);
     console.log('Delete response:', rep.data);
     return id;
   } catch (error) {

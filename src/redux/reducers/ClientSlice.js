@@ -2,10 +2,9 @@
 
 import { axiosClient } from "../axios";
 
-
 export const getClientById = createAsyncThunk('clientSlice/getClientById', async (id) => {
   try {
-    const response = await axiosClient.get(`http://localhost:8000/api/users/${id}`);
+    const response = await axiosClient.get(`http://placeandalosia.free.nf/api/users/${id}`);
     console.log('Get user response:', response.data);
     return response.data.user;
   } catch (error) {
@@ -42,6 +41,5 @@ const ClientSlice = createSlice({
     });
   }
 })
-
 
 export default ClientSlice.reducer ; 

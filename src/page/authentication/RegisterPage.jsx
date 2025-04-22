@@ -14,7 +14,6 @@ const Register = () => {
   const [address1, setaddress1] = useState('');
   const [image, setSelectedFile] = useState(null); 
 
-  
   const handleImageChange = (e) => {
     if (event.target.files && event.target.files[0]) {
       setImage(URL.createObjectURL(event.target.files[0]))
@@ -38,7 +37,7 @@ const Register = () => {
       formData.append('image', image); 
 
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res =  await axiosClient.post("http://localhost:8000/api/users", formData, {
+      const res =  await axiosClient.post("http://placeandalosia.free.nf/api/users", formData, {
         headers: {
             'Content-Type': 'multipart/form-data',
         },

@@ -1,10 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 export const getAllProduct = createAsyncThunk('prdSlice/getAllProduct',async()=>{
   try {
-    const res = await axios.get("http://localhost:8000/api/repas");
+    const res = await axios.get("http://placeandalosia.free.nf/api/repas");
     console.log(res.data);
     return res.data;
     

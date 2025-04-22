@@ -31,7 +31,7 @@
 //     // const saveCmt = async() => {
 //     //   try {
 //     //     await  ClientApi.getCsrfToken();
-//     //     const response = await axiosClient.post('http://localhost:8000/api/commentaires', {
+//     //     const response = await axiosClient.post('http://placeandalosia.free.nf/api/commentaires', {
 //     //       cCmtt: commantaire,
 //     //       user_id: user.id,
 //     //       chambre_id: chambre_id,
@@ -116,7 +116,7 @@ const RatePost = ({user,chambre_id,elm,dd}) => {
     // const saveCmt = async() => {
     //   try {
     //     await  ClientApi.getCsrfToken();
-    //     const response = await axiosClient.post('http://localhost:8000/api/commentaires', {
+    //     const response = await axiosClient.post('http://placeandalosia.free.nf/api/commentaires', {
     //       cCmtt: commantaire,
     //       user_id: user.id,
     //       chambre_id: chambre_id,

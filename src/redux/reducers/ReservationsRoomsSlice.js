@@ -3,10 +3,9 @@ import axios from "axios";
 import { axiosClient } from "../axios";
 // import { axiosClient } from "../axios";
 
-
 export const getAllReservations = createAsyncThunk('reservationsSlice/getAllReservations', async (id) => {
   try {
-    const res = await axios.get(`http://localhost:8000/api/reservations/`);
+    const res = await axios.get(`http://placeandalosia.free.nf/api/reservations/`);
     console.log('Server response:', res.data); // Log server response
     return res.data;
   } catch (error) {
@@ -17,7 +16,7 @@ export const getAllReservations = createAsyncThunk('reservationsSlice/getAllRese
 export const addReservation = createAsyncThunk('reservationsSlice/addReservation', async (reservationData) => {
   try {
     await axiosClient.get('/sanctum/csrf-cookie');
-    const res = await axiosClient.post(`http://localhost:8000/api/reservations/`, reservationData);
+    const res = await axiosClient.post(`http://placeandalosia.free.nf/api/reservations/`, reservationData);
     console.log('Server response:', res.data); 
     return res.data;
   } catch (error) {
@@ -25,7 +24,6 @@ export const addReservation = createAsyncThunk('reservationsSlice/addReservation
     throw error; 
   }
 });
-
 
 const iniState = {
   ReservationsRooms: [],

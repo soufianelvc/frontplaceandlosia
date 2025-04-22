@@ -1,9 +1,8 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit"
 
-
 export const getClientById = createAsyncThunk('HotelSlice/getClientById', async (id) => {
   try {
-    const response = await axiosClient.get(`http://localhost:8000/api/users/${id}`);
+    const response = await axiosClient.get(`http://placeandalosia.free.nf/api/users/${id}`);
     return response.data;
   } catch (error) {
     console.log(error);
@@ -42,7 +41,6 @@ const HotelSlice = createSlice({
       ht.Dislike ++;
     },
     
-
   },
   // status of function getClientById
   extraReducers: (builder)=>{

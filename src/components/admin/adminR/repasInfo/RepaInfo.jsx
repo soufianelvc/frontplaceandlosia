@@ -57,7 +57,7 @@
 //       </div>
 //       <div className="repa-image mx-3">
 //         <img 
-//           src={`http://localhost:8000/images/${image}`} 
+//           src={`http://placeandalosia.free.nf/images/${image}`} 
 //           alt="" 
 //           className="w-100 mt-2" 
 //           style={{ width: "50px", height: "150px" }} 
@@ -68,7 +68,6 @@
 // };
 
 // export default RepaInfo;
-
 
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogActions, Button } from '@mui/material';
@@ -130,7 +129,7 @@ const RepaInfo = ({ repa, i, onDelete }) => {
       </div>
       <div className="repa-image">
         <img 
-          src={`http://localhost:8000/images/${image}`} 
+          src={`http://placeandalosia.free.nf/images/${image}`} 
           alt="" 
           className="repa-image-img"
         />

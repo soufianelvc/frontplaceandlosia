@@ -56,7 +56,7 @@
 //         <p className="mb-1">Type: {types}</p>
 //         <div className="room-info mx-3">
 //         <img 
-//           src={`http://localhost:8000/images/${images}`} 
+//           src={`http://placeandalosia.free.nf/images/${images}`} 
 //           alt="" 
 //           className="w-100 mt-2" 
 //           style={{width:"50px",height:"150px"}}
@@ -68,7 +68,6 @@
 // };
 
 // export default TableInfo;
-
 
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogActions, Button } from '@mui/material';
@@ -129,7 +128,7 @@ const TableInfo = ({ table, i, onDelete }) => {
         <p>Type: {types}</p>
         <div>
           <img 
-            src={`http://localhost:8000/images/${images}`} 
+            src={`http://placeandalosia.free.nf/images/${images}`} 
             alt="" 
           />
         </div>

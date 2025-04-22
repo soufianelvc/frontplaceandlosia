@@ -3,7 +3,6 @@
 // import { ClientApi } from "../../service/Api/Client/ClientApi";
 // import { axiosClient } from "../axios";
 
-
 // export const getAllTable = createAsyncThunk('tablesSlice/getAllTable',async(arg)=>{
 //   try {
 //     const res = await axios.get("http://127.0.0.1:8000/api/tables");
@@ -31,7 +30,7 @@
 
 // export const deleteTable = createAsyncThunk('tablesSlice/deleteTable', async (id) => {
 //   try {
-//     const rep = await axiosClient.delete(`http://localhost:8000/api/tables/${id}`);
+//     const rep = await axiosClient.delete(`http://placeandalosia.free.nf/api/tables/${id}`);
 //     console.log('Delete response:', rep.data);
 //     return id;
 //   } catch (error) {
@@ -123,7 +122,7 @@ export const addTable = createAsyncThunk('tablesSlice/addTable', async (formData
 
 export const deleteTable = createAsyncThunk('tablesSlice/deleteTable', async (id) => {
   try {
-    const rep = await axiosClient.delete(`http://localhost:8000/api/tables/${id}`);
+    const rep = await axiosClient.delete(`http://placeandalosia.free.nf/api/tables/${id}`);
     console.log('Delete response:', rep.data);
     return id;
   } catch (error) {

@@ -3,7 +3,6 @@ import axios from "axios";
 import { axiosClient } from "../axios";
 import { ClientApi } from "../../service/Api/Client/ClientApi";
 
-
 export const getAllRoom = createAsyncThunk('roomSlice/getAllRoom',async()=>{
   try {
     const res = await axios.get("http://127.0.0.1:8000/api/rooms");
@@ -32,7 +31,7 @@ export const addRoom = createAsyncThunk('roomSlice/addRoom', async (formData) =>
 export const deleteRoom = createAsyncThunk('roomSlice/deleteRoom', async (id) => {
   try {
     // await ClientApi.getCsrfToken();
-    const rep = await axiosClient.delete(`http://localhost:8000/api/rooms/${id}`);
+    const rep = await axiosClient.delete(`http://placeandalosia.free.nf/api/rooms/${id}`);
     console.log('Delete response:', rep.data);
     return id;
   } catch (error) {
@@ -40,7 +39,6 @@ export const deleteRoom = createAsyncThunk('roomSlice/deleteRoom', async (id) =>
     throw error;
   }
 });
-
 
 const iniState = {
   Rooms : [],

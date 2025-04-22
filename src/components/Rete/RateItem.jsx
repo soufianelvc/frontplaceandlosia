@@ -16,7 +16,7 @@ const RateItem = ({cmmts}) => {
         <div>
             <div className="row mt-3">
                 <div className="col d-felx me-5">
-                <img alt="" height="50px" width="50px"  src={`http://localhost:8000/images/${userInfo.image}`} style={{borderRadius:"50px"}}/>
+                <img alt="" height="50px" width="50px"  src={`http://placeandalosia.free.nf/images/${userInfo.image}`} style={{borderRadius:"50px"}}/>
                     <div className="rate-name  d-inline ms-2"> {userInfo.name} {userInfo.name2} </div>
                     <div className="cat-rate  d-inline  p-1 pt-2">{cmmts.rating}</div>
                     <img className="" src={rate} alt="" height="16px" width="16px" />

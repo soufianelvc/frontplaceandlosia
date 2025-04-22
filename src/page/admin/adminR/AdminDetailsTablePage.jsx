@@ -1,160 +1,4 @@
-// import { useLocation } from "react-router-dom";
-// import AdminRestaurantSideBar from "../../../components/admin/adminR/AdminRestaurantSideBar";
-// import { useEffect, useState } from "react";
-// import { axiosClient } from "../../../redux/axios";
 
-// const AdminDetailsTablePage = () => {
-//   const location = useLocation();
-//   const { tbl } = location.state;
-//   alert(tbl.id)
-//   const [NRservation, setNRservation] = useState();
-
-//   useEffect(() => {
-//     axiosClient.get('http://localhost:8000/api/reservationstables').then(res => setNRservation(res.data));
-//   }, []);
-//   console.log(NRservation)
-//     return (
-//       <div className='container'>
-//       <div className='py-3 row'>
-//           <div className='col-md-2 col-3'> 
-//               <AdminRestaurantSideBar />
-//           </div>
-//           <div className='col-md-10 col-9'> 
-//           {/* <AdminRestaurantAddRepa/> */}
-//           <div className="pt-5 mt-5">AdminDetailsTablePage</div>
-          
-//           </div>
-//       </div>
-//   </div>
-//     )
-// }
-
-// export default AdminDetailsTablePage ; 
-
-
-// import { useLocation } from "react-router-dom";
-// import AdminRestaurantSideBar from "../../../components/admin/adminR/AdminRestaurantSideBar";
-// import { useEffect, useState } from "react";
-// import { Line } from 'react-chartjs-2';
-// import 'chart.js/auto';
-// import { axiosClient } from "../../../redux/axios";
-
-// const AdminDetailsTablePage = () => {
-//   const location = useLocation();
-//   const { tbl } = location.state;
-//   const [NRservation, setNRservation] = useState([]);
-//   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
-//   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-
-//   useEffect(() => {
-//     axiosClient.get('http://localhost:8000/api/reservationstables')
-//       .then(res => setNRservation(res.data));
-//   }, []);
-
-//   const handlePreviousMonth = () => {
-//     if (currentMonth === 0) {
-//       setCurrentMonth(11);
-//       setCurrentYear(currentYear - 1);
-//     } else {
-//       setCurrentMonth(currentMonth - 1);
-//     }
-//   };
-
-//   const handleNextMonth = () => {
-//     if (currentMonth === 11) {
-//       setCurrentMonth(0);
-//       setCurrentYear(currentYear + 1);
-//     } else {
-//       setCurrentMonth(currentMonth + 1);
-//     }
-//   };
-
-//   // Filter reservations for the specific month and year
-//   const reservationsForMonth = NRservation.filter(reservation => {
-//     const date = new Date(reservation.reservation_time);
-//     return date.getMonth() === currentMonth && date.getFullYear() === currentYear;
-//   });
-
-//   // Group reservations by day and calculate percentage for the specific table
-//   const reservationsByDay = reservationsForMonth.reduce((acc, reservation) => {
-//     const date = new Date(reservation.reservation_time).getDate();
-//     if (!acc[date]) {
-//       acc[date] = { total: 0, table: 0 };
-//     }
-//     acc[date].total += 1;
-//     if (reservation.table_id === tbl.id) {
-//       acc[date].table += 1;
-//     }
-//     return acc;
-//   }, {});
-
-//   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-//   const dates = [...Array(daysInMonth).keys()].map(i => i + 1);
-//   const percentages = dates.map(day => {
-//     const dayData = reservationsByDay[day] || { total: 0, table: 0 };
-//     return dayData.table / dayData.total * 100; // Calculate percentage
-//   });
-
-//   const data = {
-//     labels: dates,
-//     datasets: [
-//       {
-//         label: `Percentage of Reservations for ${tbl.name} (${new Date(currentYear, currentMonth).toLocaleString('default', { month: 'long' })})`,
-//         data: percentages,
-//         borderColor: 'rgba(75,192,192,1)',
-//         backgroundColor: 'rgba(75,192,192,0.2)',
-//       },
-//     ],
-//   };
-
-//   const options = {
-//     scales: {
-//       x: {
-//         title: {
-//           display: true,
-//           text: 'Day',
-//         },
-//       },
-//       y: {
-//         title: {
-//           display: true,
-//           text: 'Percentage (%)',
-//         },
-//         beginAtZero: true,
-//         ticks: {
-//           callback: function(value) {
-//             return value + '%'; // Add % symbol to the y-axis labels
-//           }
-//         }
-//       },
-//     },
-//   };
-
-//   return (
-//     <div className='container'>
-//       <div className='py-3 row'>
-//         <div className='col-md-2 col-3'>
-//           <AdminRestaurantSideBar />
-//         </div>
-//         <div className='col-md-10 col-9'>
-//           <div className="mt-5 pt-5">
-//             <div className='d-flex justify-content-between'>
-//               <button className='btnR' onClick={handlePreviousMonth}>{"<"}</button>
-//               <button className='btnR' onClick={handleNextMonth}>{">"}</button>
-//             </div>
-//             <h2>
-//               Percentage of Reservations for {tbl.name} - {new Date(currentYear, currentMonth).toLocaleString('default', { month: 'long' })} {currentYear}
-//             </h2>
-
-//             <Line data={data} options={options} style={{width:"90%"}} />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminDetailsTablePage;
 
 import { useLocation } from "react-router-dom";
 import AdminRestaurantSideBar from "../../../components/admin/adminR/AdminRestaurantSideBar";
@@ -171,7 +15,7 @@ const AdminDetailsTablePage = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
-    axiosClient.get('http://localhost:8000/api/reservationstables')
+    axiosClient.get('http://placeandalosia.free.nf/api/reservationstables')
       .then(res => setNRservation(res.data));
   }, []);
 
@@ -283,14 +127,6 @@ const AdminDetailsTablePage = () => {
 };
 
 export default AdminDetailsTablePage;
-
-
-
-
-
-
-
-
 
 /*
 INSERT INTO your_table_name (id, table_id, clientId, reservation_time, created_at, updated_at)

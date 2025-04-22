@@ -7,7 +7,7 @@ import { axiosClient } from "../axios";
 export const getAllCommentairesTable = createAsyncThunk('commentairesTableSlice/getAllCommentairesTable',
   async (id) => {
     try {
-      const res = await axiosClient.get(`http://localhost:8000/api/commentaireTables/restaurant/${id}`);
+      const res = await axiosClient.get(`http://placeandalosia.free.nf/api/commentaireTables/restaurant/${id}`);
       return res.data;
     } catch (error) {
       console.error('Error fetching commentaires:', error); 
@@ -21,7 +21,7 @@ export const addCommentaireTable = createAsyncThunk('commentairesTableSlice/addC
   async (commentData) => {
     try {
       await ClientApi.getCsrfToken();
-      const res = await axiosClient.post(`http://localhost:8000/api/commentaireTables`, commentData);
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/commentaireTables`, commentData);
       console.log('Server response:', res.data); 
       return res.data;
     } catch (error) {

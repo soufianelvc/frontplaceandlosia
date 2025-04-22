@@ -14,7 +14,7 @@
 //         <div>
 //             <div className="row mt-3">
 //                 <div className="col d-felx me-5">
-//                 <img alt="" height="60px" width="50px"  src={`http://localhost:8000/images/${userInfo.image}`}/>
+//                 <img alt="" height="60px" width="50px"  src={`http://placeandalosia.free.nf/images/${userInfo.image}`}/>
 //                     <div className="rate-name  d-inline ms-2"> {userInfo.name} {userInfo.name2} </div>
 //                     <div className="cat-rate  d-inline  p-1 pt-2">{cmmts.rating}</div>
 //                     <img className="" src={rate} alt="" height="16px" width="16px" />
@@ -54,7 +54,7 @@ const RateItemTable = ({ cmmts }) => {
           <img
             alt=""
             className="rate-item-image"
-            src={`http://localhost:8000/images/${userInfo.image}`}
+            src={`http://placeandalosia.free.nf/images/${userInfo.image}`}
           />
           <div className="rate-item-name">
             {userInfo.name} {userInfo.name2}

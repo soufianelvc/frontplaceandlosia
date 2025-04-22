@@ -1,161 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// // import avatar from '../../../../images/avatar.png';
-// import avatar from '../../../../images/avatar.png'
-// import './adminResUpdateRepa.css';
-// import { axiosClient } from '../../../../redux/axios';
-// import ImageUploading from 'react-images-uploading';
-// import { useNavigate } from 'react-router-dom';
-
-// const AdminResUpdateRepa = ({ repas }) => {
-//   console.log(repas)
-//   const navigate = useNavigate();
-//   const [img, setImg] = useState(repas.image ? `http://localhost:8000/images/${repas.image}` : avatar);
-//   const [selectedFiles, setSelectedFiles] = useState([]);
-//   const [name, setName] = useState(repas.name);
-//   const [price, setPrice] = useState(repas.price);
-//   const [description, setDescription] = useState(repas.description);
-//   const [category, setCategory] = useState(repas.category);
-//   const [images, setImages] = useState([]);
-//   const [T, setT] = useState(false);
-//   const maxNumber = 6;
-
-//   useEffect(() => {
-//     const loadedImages = [];
-//     for (let i = 1; i <= 6; i++) {
-//       if (repas[`img${i}`]) {
-//         loadedImages.push({ file: null, data_url: `http://localhost:8000/images/${repas[`img${i}`]}` });
-//       }
-//     }
-//     setImages(loadedImages);
-//   }, [repas]);
-
-//   const onChange = (imageList, addUpdateIndex) => {
-//     setImages(imageList);
-//   };
-
-//   const handleImageChange = (e) => {
-//     e.preventDefault(); // Prevent form submission
-//     if (e.target.files && e.target.files[0]) {
-//       setImg(URL.createObjectURL(e.target.files[0]));
-//       setSelectedFiles(e.target.files[0]);
-//     }
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-    
-//     try {
-//       const formData = new FormData();
-//       formData.append('_method', 'PUT'); // For Laravel to recognize the update method
-//       formData.append('name', name);
-//       formData.append('price', price);
-//       formData.append('description', description);
-//       formData.append('category', category);
-      
-//       if (selectedFiles) {
-//         formData.append('image', selectedFiles);
-//       }
-  
-//       images.forEach((image, index) => {
-//         if (image.file) {
-//           formData.append(`img${index + 1}`, image.file);
-//         }
-//       }); 
-  
-//       await axiosClient.get('/sanctum/csrf-cookie');
-//       const res = await axiosClient.post(`http://localhost:8000/api/repas/${repas.id}`, formData, {
-//         headers: {
-//           'Content-Type': 'multipart/form-data',
-//         },
-//       });
-//       console.log(res.status);
-//       // Uncomment the following lines if needed
-//       if (T === true) {
-//         navigate('/management_repas');
-//         setT(false);
-//       }
-      
-//       // alert('Updated successfully');
-  
-//     } catch (error) {
-//       console.error('Update failed:', error.response.data);
-//     }
-//   };
-
-//   const imageStyle = {
-//     width: '100%',
-//     height: '100px',
-//     objectFit: 'cover',
-//   };
-
-//   return (
-//     <div>
-//       <div className="row justify-content-start adminhaddRR">
-//         <div className="admin-content-text pb-4 mt-3">Update Meal</div>
-//         <div className="col-sm-9">
-//           <form onSubmit={handleSubmit} encType="multipart/form-data">
-//             <div className="text-form pb-2">Picture of the Meal</div>
-//             <div>
-//               <label htmlFor="upload-photo">
-//                 <img src={img} alt="fzx" height="100px" width="120px" style={{ cursor: 'pointer' }} />
-//                 <input type="file" name="photo" onChange={handleImageChange} id="upload-photo" className="d-none" />
-//               </label>
-//             </div>
-
-//             <input type="text" className="input-form d-block mt-3 px-3" name="name" placeholder="Meal Name" value={name} onChange={(e) => setName(e.target.value)} />
-//             <input type="text" className="input-form d-block mt-3 px-3" name="price" placeholder="Price DH" value={price} onChange={(e) => setPrice(e.target.value)} />
-//             <input type="text" className="input-form d-block mt-3 px-3" name="category" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
-//             <textarea className="input-form-area p-2 mt-3" rows="4" cols="50" name="description" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
-
-//             <div className="container ms-0 mt-3">
-//               <div className="card">
-//                 <div className="card-header">
-//                   <h4>Images</h4>
-//                 </div>
-//                 <div className="card-body">
-//                   <ImageUploading multiple value={images} onChange={onChange} maxNumber={maxNumber} dataURLKey="data_url">
-//                     {({ imageList, onImageUpload, onImageRemoveAll, onImageUpdate, onImageRemove, isDragging, dragProps }) => (
-//                       <div className="upload__image-wrapper text-center">
-//                         <button className={`btn btn-primary ${isDragging ? 'bg-danger' : ''}`} onClick={onImageUpload} {...dragProps}>
-//                           Add images
-//                         </button>
-//                         &nbsp;
-//                         <button className="btn btn-danger" onClick={onImageRemoveAll}>
-//                           Remove all images
-//                         </button>
-//                         <div className="row mt-4">
-//                           {imageList.map((image, index) => (
-//                             <div key={index} className="col-md-3 mb-4">
-//                               <div className="card">
-//                                 <img src={image['data_url']} alt="" className="card-img-top" style={imageStyle} />
-//                                 <div className="card-body">
-//                                   <button className="btn btn-warning btn-sm ms-0 mb-2" onClick={() => onImageUpdate(index)}>
-//                                     Update
-//                                   </button>
-//                                   <button className="btn btn-danger btn-sm w-auth" onClick={() => onImageRemove(index)}>
-//                                     Remove
-//                                   </button>
-//                                 </div>
-//                               </div>
-//                             </div>
-//                           ))}
-//                         </div>
-//                       </div>
-//                     )}
-//                   </ImageUploading>
-//                 </div>
-//               </div>
-//             </div>
-
-//             <button type="submit" className="btn-save d-inline mt-2" onClick={() => setT(true)}>Save modifications</button>
-//           </form>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminResUpdateRepa;
 
 
 import React, { useState, useEffect } from 'react';
@@ -168,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const AdminResUpdateRepa = ({ repas = {} }) => {
   const navigate = useNavigate();
   const { id, image = '', name = '', price = '', description = '', category = '', rating = '', digitalType = '', stock = '', title = '' } = repas;
-  const [img, setImg] = useState(image ? `http://localhost:8000/images/${image}` : avatar);
+  const [img, setImg] = useState(image ? `http://placeandalosia.free.nf/images/${image}` : avatar);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [mealName, setMealName] = useState(name);
   const [mealPrice, setMealPrice] = useState(price);
@@ -187,7 +29,7 @@ const AdminResUpdateRepa = ({ repas = {} }) => {
       const loadedImages = [];
       for (let i = 1; i <= 6; i++) {
         if (repas[`img${i}`]) {
-          loadedImages.push({ file: null, data_url: `http://localhost:8000/images/${repas[`img${i}`]}` });
+          loadedImages.push({ file: null, data_url: `http://placeandalosia.free.nf/images/${repas[`img${i}`]}` });
         }
       }
       setImages(loadedImages);
@@ -232,7 +74,7 @@ const AdminResUpdateRepa = ({ repas = {} }) => {
       }); 
   
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res = await axiosClient.post(`http://localhost:8000/api/repas/${id}`, formData, {
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/repas/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

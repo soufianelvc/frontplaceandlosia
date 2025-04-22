@@ -1,131 +1,3 @@
-// // AdminDetailsRepasPage
-
-// import { useLocation } from "react-router-dom";
-// import AdminRestaurantSideBar from "../../../components/admin/adminR/AdminRestaurantSideBar";
-// import { axiosClient } from "../../../redux/axios";
-// import { useEffect, useState } from "react";
-
-
-// const AdminDetailsRepasPage = () => {
-//   const location = useLocation();
-//   const { repa } = location.state;
-//   console.log(repa.id)
-//   const [NCommend, setNCommend] = useState([]);
-//   useEffect(() => {
-//     axiosClient.get('http://localhost:8000/api/commandes').then(res=>setNCommend(res.data))
-//   }, []);
-//   const da = NCommend.filter(item=>item.repas.id ==repa.id)
-//   console.log(da)
-//   return (
-//     <div className='container'>
-//     <div className='py-3 row'>
-//         <div className='col-md-2 col-3'> {/* Changed from 'col sm-3 xs-2 md-2' */}
-//             <AdminRestaurantSideBar />
-//         </div>
-//         <div className='col-md-10 col-9'> {/* Changed from 'col sm-9 xs-10 md-10' */}
-//           <div className="mt-5 pt-5"></div>
-//           AdminDetailsRepas
-          
-//         {/* <AdminRestaurantAddRepa/> */}
-//         </div>
-//     </div>
-// </div>
-//   )
-// }
-
-// export default AdminDetailsRepasPage ; 
-
-
-// import { useLocation } from "react-router-dom";
-// import AdminRestaurantSideBar from "../../../components/admin/adminR/AdminRestaurantSideBar";
-// import { axiosClient } from "../../../redux/axios";
-// import { useEffect, useState } from "react";
-// import { Line } from 'react-chartjs-2';
-// import 'chart.js/auto';
-
-// const AdminDetailsRepasPage = () => {
-//   const location = useLocation();
-//   const { repa } = location.state;
-//   const [NCommend, setNCommend] = useState([]);
-  
-//   useEffect(() => {
-//     axiosClient.get('http://localhost:8000/api/commandes').then(res => setNCommend(res.data));
-//   }, []);
-
-//   // Filter commands for the specific meal
-//   const mealCommands = NCommend.filter(item => item.repas.id === repa.id);
-
-//   // Group commands by day and calculate percentage for the specific meal
-//   const commandsByDay = NCommend.reduce((acc, command) => {
-//     const date = new Date(command.created_at).toLocaleDateString('en-US');
-//     if (!acc[date]) {
-//       acc[date] = { total: 0, meal: 0 };
-//     }
-//     acc[date].total += 1;
-//     if (command.repas.id === repa.id) {
-//       acc[date].meal += 1;
-//     }
-//     return acc;
-//   }, {});
-
-//   const dates = Object.keys(commandsByDay);
-//   const percentages = dates.map(date => (commandsByDay[date].meal / commandsByDay[date].total) * 100);
-
-//   const data = {
-//     labels: dates,
-//     datasets: [
-//       {
-//         label: `Percentage of Commands for ${repa.name}`,
-//         data: percentages,
-//         borderColor: 'rgba(75,192,192,1)',
-//         backgroundColor: 'rgba(75,192,192,0.2)',
-//       },
-//     ],
-//   };
-//   console.log(data);
-
-//   const options = {
-//     scales: {
-//       x: {
-//         title: {
-//           display: true,
-//           text: 'Date',
-//         },
-//       },
-//       y: {
-//         title: {
-//           display: true,
-//           text: 'Percentage (%)',
-//         },
-//         beginAtZero: true,
-//         ticks: {
-//           callback: function(value) {
-//             return value + '%'; // Add % symbol to the y-axis labels
-//           }
-//         }
-//       },
-//     },
-//   };
-
-//   return (
-//     <div className='container'>
-//       <div className='py-3 row'>
-//         <div className='col-md-2 col-3'>
-//           <AdminRestaurantSideBar />
-//         </div>
-//         <div className='col-md-10 col-9'>
-//           <div className="mt-5 pt-5">
-//             <h2>Percentage of Commands for {repa.name}</h2>
-//             <Line data={data} options={options} />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminDetailsRepasPage;
-
 
 import { useLocation } from "react-router-dom";
 import AdminRestaurantSideBar from "../../../components/admin/adminR/AdminRestaurantSideBar";
@@ -142,7 +14,7 @@ const AdminDetailsRepasPage = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
-    axiosClient.get('http://localhost:8000/api/commandes').then(res => setNCommend(res.data));
+    axiosClient.get('http://placeandalosia.free.nf/api/commandes').then(res => setNCommend(res.data));
   }, []);
 
   const handlePreviousMonth = () => {
@@ -251,8 +123,6 @@ const AdminDetailsRepasPage = () => {
 };
 
 export default AdminDetailsRepasPage;
-
-
 
 // INSERT INTO `commandes` (`id`, `Qte`, `mealId`, `clientId`, `created_at`, `updated_at`) VALUES ('108', '1', '21', '15', '2024-08-01 09:15:07', NULL);
 // INSERT INTO `commandes` (`id`, `Qte`, `mealId`, `clientId`, `created_at`, `updated_at`) VALUES ('109', '1', '21', '15', '2024-08-01 10:25:07', NULL);

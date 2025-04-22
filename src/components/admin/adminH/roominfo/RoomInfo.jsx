@@ -21,8 +21,6 @@ const RoomInfo = ({ room, i, onDelete }) => {
     setOpenAlert(false);
   };
 
-
-
   const CustomAlert = ({ open, handleClose }) => (
     <Dialog open={open} onClose={handleClose}>
       <DialogContent  style={{backgroundColor:"rgba(141, 17, 199, 0.938)"}}>
@@ -42,7 +40,6 @@ const RoomInfo = ({ room, i, onDelete }) => {
   const handleDetails = () => {
     navigate('/admin_details_room', { state: { rm: room} });
   };
-
 
   return (
     <div className="reservation-info bg-light my-5 rounded mt-5">
@@ -67,7 +64,7 @@ const RoomInfo = ({ room, i, onDelete }) => {
       </div>
       <div className="room-info mx-3">
         <img 
-          src={`http://localhost:8000/images/${image}`} 
+          src={`http://placeandalosia.free.nf/images/${image}`} 
           alt="" 
           className="w-100 mt-2" 
           style={{width:"50px",height:"150px"}}

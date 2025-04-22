@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const AdminUpdateRoom = ({ rm }) => {
   const navigate = useNavigate();
   const { id } = rm;
-  const [img, setImg] = useState(rm.image ? `http://localhost:8000/images/${rm.image}` : avatar);
+  const [img, setImg] = useState(rm.image ? `http://placeandalosia.free.nf/images/${rm.image}` : avatar);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [typech, setTypech] = useState(rm.typech);
   const [price, setPrice] = useState(rm.price);
@@ -30,7 +30,7 @@ const AdminUpdateRoom = ({ rm }) => {
     const loadedImages = [];
     for (let i = 1; i <= 6; i++) {
       if (rm[`img${i}`]) {
-        loadedImages.push({ file: null, data_url: `http://localhost:8000/images/${rm[`img${i}`]}` });
+        loadedImages.push({ file: null, data_url: `http://placeandalosia.free.nf/images/${rm[`img${i}`]}` });
       }
     }
     setImages(loadedImages);
@@ -79,7 +79,7 @@ const AdminUpdateRoom = ({ rm }) => {
       }); 
   
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res = await axiosClient.post(`http://localhost:8000/api/rooms/${rm.id}`, formData, {
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/rooms/${rm.id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

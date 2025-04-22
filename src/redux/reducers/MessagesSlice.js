@@ -4,13 +4,13 @@ import { ClientApi } from '../../service/Api/Client/ClientApi';
 import { axiosClient } from '../axios';
 
 export const fetchMessages = createAsyncThunk('messages/fetchMessages', async () => {
-  const response = await axios.get('http://localhost:8000/api/messages');
+  const response = await axios.get('http://placeandalosia.free.nf/api/messages');
   return response.data;
 });
 
 export const addMessage = createAsyncThunk('messages/addMessage', async (newMessage) => {
   await ClientApi.getCsrfToken();
-  const response = await axiosClient.post('http://localhost:8000/api/messages', newMessage);
+  const response = await axiosClient.post('http://placeandalosia.free.nf/api/messages', newMessage);
   return response.data;
 });
 

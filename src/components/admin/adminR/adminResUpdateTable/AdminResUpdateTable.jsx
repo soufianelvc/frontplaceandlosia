@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const AdminResUpdateTable = ({ tbl }) => {
   const navigate = useNavigate();
   // const { id } = tbl;
-  const [img, setImg] = useState(tbl.images ? `http://localhost:8000/images/${tbl.images}` : avatar);
+  const [img, setImg] = useState(tbl.images ? `http://placeandalosia.free.nf/images/${tbl.images}` : avatar);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [types, setTypes] = useState(tbl.types);
   const [rating, setRating] = useState(tbl.rating);
@@ -28,7 +28,7 @@ const AdminResUpdateTable = ({ tbl }) => {
     const loadedImages = [];
     for (let i = 1; i <= 6; i++) {
       if (tbl[`img${i}`]) {
-        loadedImages.push({ file: null, data_url: `http://localhost:8000/images/${tbl[`img${i}`]}` });
+        loadedImages.push({ file: null, data_url: `http://placeandalosia.free.nf/images/${tbl[`img${i}`]}` });
       }
     }
     setImages(loadedImages);
@@ -74,7 +74,7 @@ const AdminResUpdateTable = ({ tbl }) => {
       });
 
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res = await axiosClient.post(`http://localhost:8000/api/tables/${tbl.id}`, formData, {
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/tables/${tbl.id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

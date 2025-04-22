@@ -6,7 +6,7 @@ export const getAllReservationsTable = createAsyncThunk(
   'reservationsTable/getAllReservationsTable',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await axiosClient.get(`http://localhost:8000/api/reservationstables/`);
+      const res = await axiosClient.get(`http://placeandalosia.free.nf/api/reservationstables/`);
       console.log('Server response:', res.data);
       return res.data;
     } catch (error) {
@@ -22,7 +22,7 @@ export const addReservationTable = createAsyncThunk(
   async (reservationData, { rejectWithValue }) => {
     try {
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res = await axiosClient.post(`http://localhost:8000/api/reservationstables/`, reservationData);
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/reservationstables/`, reservationData);
       console.log('Server response:', res.data);
       
       return res.data;
@@ -39,7 +39,7 @@ export const deleteReservationTable = createAsyncThunk(
   async (reservationId, { rejectWithValue }) => {
     try {
       await axiosClient.get('/sanctum/csrf-cookie');
-      const res = await axiosClient.delete(`http://localhost:8000/api/reservationstables/${reservationId}`);
+      const res = await axiosClient.delete(`http://placeandalosia.free.nf/api/reservationstables/${reservationId}`);
       console.log('Server response:', res.data);
       return reservationId; // Return the ID of the deleted reservation
     } catch (error) {

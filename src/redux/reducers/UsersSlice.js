@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice, isRejectedWithValue } from "@reduxjs/too
 import axios from "axios";
 import { axiosClient } from "../axios";
 
-
 export const getAllUsers = createAsyncThunk('usersSlice/getAllUsers',async()=>{
   try {
     const res = await axios.get("http://127.0.0.1:8000/api/users");
@@ -18,7 +17,7 @@ export const getAllUsers = createAsyncThunk('usersSlice/getAllUsers',async()=>{
 export const deleteUser = createAsyncThunk('usersSlice/deleteUser', async (id) => {
   try {
     // await ClientApi.getCsrfToken();
-    const rep = await axiosClient.delete(`http://localhost:8000/api/users/${id}`);
+    const rep = await axiosClient.delete(`http://placeandalosia.free.nf/api/users/${id}`);
     console.log('Delete response:', rep.data);
     return id;
   } catch (error) {
@@ -37,7 +36,7 @@ export const deleteUser = createAsyncThunk('usersSlice/deleteUser', async (id) =
 //       formData.append(key, userData[key]);
 //     }
 
-//     const response = await axiosClient.put(`http://localhost:8000/api/users/${userData.id}`, formData, {
+//     const response = await axiosClient.put(`http://placeandalosia.free.nf/api/users/${userData.id}`, formData, {
 //       headers: {
 //         'Content-Type': 'multipart/form-data',
 //       },
@@ -64,7 +63,7 @@ export const updateUser = createAsyncThunk('usersSlice/updateUser',async ({ id, 
         formData.append('image', userData.image);
       }
       await axiosClient.get('/sanctum/csrf-cookie');
-      const response = await axiosClient.put(`http://localhost:8000/api/users/${id}`, formData, {
+      const response = await axiosClient.put(`http://placeandalosia.free.nf/api/users/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -79,7 +78,6 @@ export const updateUser = createAsyncThunk('usersSlice/updateUser',async ({ id, 
     }
   }
 );
-
 
 const iniState = {
   Users : [],

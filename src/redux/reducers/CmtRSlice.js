@@ -3,11 +3,10 @@ import axios from "axios";
 import { ClientApi } from "../../service/Api/Client/ClientApi";
 import { axiosClient } from "../axios";
 
-
 export const getAllCommentairesRoom= createAsyncThunk('commetairesRoomSlice/getAllCommentairesRoom',
  async (id) => {
   try {
-    const res = await axios.get(`http://localhost:8000/api/chambrecommentaires/${id}`);
+    const res = await axios.get(`http://placeandalosia.free.nf/api/chambrecommentaires/${id}`);
   
     return res.data;
   } catch (error) {
@@ -19,7 +18,7 @@ export const addCommentaireRoom = createAsyncThunk('commetairesRoomSlice/addComm
   async (commentData) => {
     try {
       await  ClientApi.getCsrfToken();
-      const res = await axiosClient.post(`http://localhost:8000/api/commentaires`, commentData);
+      const res = await axiosClient.post(`http://placeandalosia.free.nf/api/commentaires`, commentData);
       console.log('Server response:', res.data); 
       return res.data;
     } catch (error) {

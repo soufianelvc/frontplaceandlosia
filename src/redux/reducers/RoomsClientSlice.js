@@ -2,10 +2,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { axiosClient } from "../axios";
 
-
 export const getAllReservationClient = createAsyncThunk('reservationClientSlice/getAllReservationClient', async (id) => {
   try {
-    const res = await axios.get(`http://localhost:8000/api/reservationsClient/${id}`);
+    const res = await axios.get(`http://placeandalosia.free.nf/api/reservationsClient/${id}`);
     console.log('Server response:', res.data); // Log server response
     return res.data;
   } catch (error) {
@@ -14,11 +13,9 @@ export const getAllReservationClient = createAsyncThunk('reservationClientSlice/
   }
 });
 
-
-
 export const deleteReservation = createAsyncThunk('reservationClientSlice/deleteReservation', async (reservationId, { rejectWithValue }) => {
   try {
-    const response = await axiosClient.delete(`http://localhost:8000/api/reservations/${reservationId}`);
+    const response = await axiosClient.delete(`http://placeandalosia.free.nf/api/reservations/${reservationId}`);
     console.log('Delete response:', response.data); // Log delete response
     return reservationId;
   } catch (error) {
